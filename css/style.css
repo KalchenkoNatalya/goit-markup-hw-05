@@ -50,7 +50,6 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid red;
 }
 
 ul {
@@ -579,10 +578,11 @@ ul {
   position: absolute;
   right: 24px;
   top: 24px;
-  padding: 8px;
+  display: flex;
   width: 24px;
   height: 24px;
-
+  align-items: center;
+  justify-content: center;
   background-color: #E7E9FC;
 
   border-radius: 50%;
@@ -653,7 +653,7 @@ ul {
 .services-button:focus {
   color: var(--second-accent-color);
   background-color: var(--accent-color);
-  border: #404BBF;
+  border: 1px solid #404BBF;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -663,6 +663,11 @@ ul {
   gap: 24px;
 }
 
+
+
+/* -----------Servises list-------- */
+
+
 .services-list {
   display: flex;
   flex-wrap: wrap;
@@ -671,27 +676,24 @@ ul {
   margin-top: 72px;
 }
 
-.services-list .item {
+.types-services {
   width: calc((100% - 48px) / 3);
-  /* margin-right: 24px;
-  margin-bottom: 48px; */
-
-
+  border: 1px solid #E7E9FC;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-/* .services-list .item:nth-child(3n) {
-  margin-right: 0;
+.types-services:hover,
+.types-services:focus {
+  border: 0.5px solid #F4F4FD;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.services-list .item:nth-last-child(-n+3) {
-  margin-bottom: 0;
-} */
 
-.types-services:hover .services-captions,
+/* .types-services:hover .services-captions,
 .types-services:focus .services-captions {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border: 0.5px solid #F4F4FD;
-}
+} */
 
 .services-item-wrap {
   position: relative;
@@ -709,13 +711,15 @@ ul {
   padding-right: 32px;
   padding-top: 40px;
   padding-bottom: 164px;
+  background-color: var(--accent-color);
 
+}
+
+.services-overlay-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--background-light-color);
-  background-color: var(--accent-color);
-
 }
 
 .services-wrap:hover .services-overlay,
@@ -730,7 +734,7 @@ ul {
   border-right: 1px solid #E7E9FC;
   border-bottom: 1px solid #E7E9FC;
   border-left: 1px solid #E7E9FC;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+
 }
 
 .section-title {
